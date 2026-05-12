@@ -1,0 +1,114 @@
+{
+  "observed_at": "2026-05-12",
+  "sample_dataset": "benchmark/sharegpt_observation_sample.json",
+  "dummy_server_log": "benchmark/sharegpt_dummy_requests.jsonl",
+  "note": "Captured from actual bench_serving ShareGPT runs with warmup_requests=0 and num_prompts=2. Paths identify the backend: /generate=sglang, /v1/completions=sglang-oai, /v1/chat/completions=sglang-oai-chat.",
+  "request_bodies": [
+    {
+      "log_index": 2,
+      "request_id": 2,
+      "backend": "sglang",
+      "path": "/generate",
+      "body": {
+        "text": "Write a tiny haiku about a benchmark request.",
+        "sampling_params": {
+          "temperature": 0.0,
+          "max_new_tokens": 8,
+          "ignore_eos": true
+        },
+        "stream": true,
+        "lora_path": null,
+        "return_logprob": false,
+        "return_routed_experts": false,
+        "logprob_start_len": -1
+      }
+    },
+    {
+      "log_index": 3,
+      "request_id": 3,
+      "backend": "sglang",
+      "path": "/generate",
+      "body": {
+        "text": "What fields should I inspect in an online serving benchmark payload?",
+        "sampling_params": {
+          "temperature": 0.0,
+          "max_new_tokens": 8,
+          "ignore_eos": true
+        },
+        "stream": true,
+        "lora_path": null,
+        "return_logprob": false,
+        "return_routed_experts": false,
+        "logprob_start_len": -1
+      }
+    },
+    {
+      "log_index": 7,
+      "request_id": 7,
+      "backend": "sglang-oai-chat",
+      "path": "/v1/chat/completions",
+      "body": {
+        "model": "dummy-model",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write a tiny haiku about a benchmark request."
+          }
+        ],
+        "max_completion_tokens": 8,
+        "stream": true,
+        "temperature": 0.0,
+        "ignore_eos": true
+      }
+    },
+    {
+      "log_index": 8,
+      "request_id": 8,
+      "backend": "sglang-oai-chat",
+      "path": "/v1/chat/completions",
+      "body": {
+        "model": "dummy-model",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What fields should I inspect in an online serving benchmark payload?"
+          }
+        ],
+        "max_completion_tokens": 8,
+        "stream": true,
+        "temperature": 0.0,
+        "ignore_eos": true
+      }
+    },
+    {
+      "log_index": 12,
+      "request_id": 2,
+      "backend": "sglang-oai",
+      "path": "/v1/completions",
+      "body": {
+        "model": "dummy-model",
+        "prompt": "Write a tiny haiku about a benchmark request.",
+        "best_of": 1,
+        "max_tokens": 8,
+        "stream": true,
+        "temperature": 0.0,
+        "ignore_eos": true
+      }
+    },
+    {
+      "log_index": 13,
+      "request_id": 3,
+      "backend": "sglang-oai",
+      "path": "/v1/completions",
+      "body": {
+        "model": "dummy-model",
+        "prompt": "What fields should I inspect in an online serving benchmark payload?",
+        "best_of": 1,
+        "max_tokens": 8,
+        "stream": true,
+        "temperature": 0.0,
+        "ignore_eos": true
+      }
+    }
+  ]
+}

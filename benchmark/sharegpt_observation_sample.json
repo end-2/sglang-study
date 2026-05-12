@@ -1,0 +1,41 @@
+[
+  {
+    "id": "dummy-sharegpt-1",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Explain prefix caching in one short paragraph."
+      },
+      {
+        "from": "gpt",
+        "value": "Prefix caching reuses previously computed prompt states so repeated prefixes can skip redundant prefill work."
+      }
+    ]
+  },
+  {
+    "id": "dummy-sharegpt-2",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Write a tiny haiku about a benchmark request."
+      },
+      {
+        "from": "gpt",
+        "value": "Packets cross the wire, silent timers count tokens, logs bloom line by line."
+      }
+    ]
+  },
+  {
+    "id": "dummy-sharegpt-3",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "What fields should I inspect in an online serving benchmark payload?"
+      },
+      {
+        "from": "gpt",
+        "value": "Inspect the prompt, sampling parameters, stream flag, requested output length, model name, and any routing headers."
+      }
+    ]
+  }
+]
